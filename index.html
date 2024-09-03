@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Открытка Любви</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fbe7e7;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card h1 {
+            color: #ff4971;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .card .heart {
+            font-size: 3rem;
+            color: #ff4971;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .card button {
+            background-color: #ff4971;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card button:hover {
+            background-color: #ff2953;
+        }
+
+        .message {
+            display: none;
+            font-size: 1.2rem;
+            color: #ff4971;
+            margin-top: 20px;
+        }
+
+        /* Адаптация для телефонов */
+        @media (max-width: 600px) {
+            .card h1 {
+                font-size: 2rem;
+            }
+
+            .card p {
+                font-size: 1rem;
+            }
+
+            .card .heart {
+                font-size: 2.5rem;
+            }
+
+            .card button {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Я тебя люблю!</h1>
+        <p>С любовью Оморбек, эта страничка сделано именно для тебя ❤️ </p>
+        <div class="heart">❤️</div>
+        <button onclick="sendLove()">Отправить Любовь</button>
+        <div class="message" id="message">Любовь отправлена! 💖</div>
+    </div>
+
+    <script>
+        function sendLove() {
+            var message = document.getElementById('message');
+            message.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
